@@ -20,15 +20,18 @@ package com.crimsoncricket.asserts;
 public class Assert {
 
     public static void assertStateNotNull(Object anObject, String message) {
-        if (anObject == null) {
+        if (anObject == null)
             throw new IllegalStateException(message);
-        }
     }
 
     public static void assertArgumentNotNull(Object anArgument, String message) {
-        if (anArgument == null) {
+        if (anArgument == null)
             throw new IllegalArgumentException(message);
-        }
+    }
+
+    public static void assertStringArgumentNotEmpty(String anArgument, String message) {
+        if (anArgument.isEmpty())
+            throw new IllegalArgumentException(message);
     }
 
 
