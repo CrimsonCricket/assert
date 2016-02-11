@@ -17,7 +17,10 @@
 
 package com.crimsoncricket.asserts;
 
+import java.util.Collection;
+
 public class Assert {
+
 
     public static void assertStateNotNull(Object anObject, String message) {
         if (anObject == null)
@@ -33,6 +36,13 @@ public class Assert {
         if (anArgument.isEmpty())
             throw new IllegalArgumentException(message);
     }
+
+    public static void assertArgumentCollectionNotContainsNull(Collection<?> anArgument, String message) {
+        if (anArgument.stream().anyMatch(element -> element == null))
+            throw new IllegalArgumentException(message);
+
+    }
+
 
 
 }
