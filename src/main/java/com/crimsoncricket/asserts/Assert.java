@@ -33,7 +33,7 @@ public class Assert {
     }
 
     public static void assertStringArgumentNotEmpty(String anArgument, String message) {
-        if (anArgument.isEmpty())
+        if (anArgument.trim().isEmpty())
             throw new IllegalArgumentException(message);
     }
 
