@@ -43,6 +43,16 @@ public class Assert {
 
     }
 
+    public static void assertArgumentGreaterThan(Integer anArgument, Integer minExclusive, String message) {
+        if (anArgument <= minExclusive)
+            throw new IllegalArgumentException(message);
+    }
+
+    public static void assertArgumentLessThanOrEqual(Integer anArgument, Integer maxInclusive, String message) {
+        if (anArgument < maxInclusive)
+            throw new IllegalArgumentException(message);
+    }
+
 
 
 }
