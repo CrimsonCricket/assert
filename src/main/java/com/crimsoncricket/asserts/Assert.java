@@ -49,7 +49,7 @@ public class Assert {
     }
 
     public static void assertArgumentLessThanOrEqual(Integer anArgument, Integer maxInclusive, String message) {
-        if (anArgument < maxInclusive)
+        if (anArgument > maxInclusive)
             throw new IllegalArgumentException(message);
     }
 
