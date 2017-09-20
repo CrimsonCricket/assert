@@ -36,6 +36,5 @@
                 </configuration>
             </plugin>
         </plugins>
-        <finalName>roep</finalName>
     </build>
 </project>
